@@ -14,6 +14,10 @@
     padding:0 60px 40px 60px;
 }
 
+.jumbotron-sub{
+    padding:0 60px 40px 60px;
+}
+
 .jumbotron-main h1{
     margin-top:60px;
     margin-bottom: 30px;
@@ -60,7 +64,7 @@
     font-size: 50px;
 }
 
-.img-full{
+.img-fluid{
     width:100%;
     height: 500px
 }
