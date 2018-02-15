@@ -1,0 +1,37 @@
+<%- include('includes/header') %>
+
+<div class="text-center reg-page">
+    <% if (locals.errors) { %>
+        <% errors.forEach(function(error){ %>
+            <div class="alert alert-danger"><%= error.msg %></div>
+        <% }) %>
+    <% } %>
+    <form method='post' action="/users/register" class="form-signin">
+          <h1 class="h3 mb-3 font-weight-normal">User Registration</h1>
+          <label class="sr-only">Name</label>
+          <input type="text" name="name" class="form-control" placeholder="Name" required autofocus>
+          <br>
+          <label class="sr-only">Email</label>
+          <input type="email" name="email" class="form-control" placeholder="Email" required autofocus>
+          <br>
+          <label class="sr-only">Username</label>
+          <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
+          <br>
+          <label class="sr-only">Password</label>
+          <input type="password" name="password" class="form-control" placeholder="Password" required>
+          <br>
+          <label class="sr-only">Confirm Password</label>
+          <input type="password" name="password2" class="form-control" placeholder="Password Confirm" required autofocus>
+          <br>
+          <p>Have an Account? <a href="/users/login">Login</a></p>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+          <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </form>
+</div>
+
+<%- include('includes/footer') %>
